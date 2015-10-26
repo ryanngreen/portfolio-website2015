@@ -28,6 +28,13 @@ body {
 
 .column {
   width: 50%;
+}
+
+#work-container .column {
+  margin: 25px;
+}
+
+#write-container .column {
   padding: 25px;
 }
 
@@ -60,7 +67,7 @@ nav a {
   color: #ea6045;
 }
 
-nav a:hover::before {
+nav ul a:hover::before {
   content: '>';
   padding-right: 5px;
 }
@@ -73,8 +80,19 @@ nav a:hover::before {
 #head-container {
   height: 500px;
   width: 100%;
-  background: #f8ca4d;
   display: flex;
+}
+
+.home-page #head-container {
+  background: #f8ca4d;
+}
+
+.works-page #head-container {
+  background: #b04d66;
+}
+
+.about-page #head-container {
+  background: #ea6045;
 }
 
 #head-info {
@@ -99,21 +117,89 @@ h1 {
   background: #ea6045;
 }
 
+#head-info .btn:hover {
+  background: #dd4a2d;
+}
+
 #work-container {
   width: 80%;
   max-width: 1100px;
-  margin: auto;
+  margin: 40px auto;
   text-align: center;
 }
 
 #work-container .column img {
   max-width: 100%;
-  padding-top: 45px;
+}
+
+.work-overview {
+  text-align: left;
+  font-size: .8em;
+}
+
+.work-title {
+  font-weight: bold;
+  margin-bottom: 0
+}
+
+.work-spec {
+  font-style: italic;
+  margin-top: 0;
+}
+
+@media screen and (min-width: 670px) {
+  .column {
+    position: relative;
+  }
+
+  #work-container .column img {
+    padding-top: 0;
+  }
+
+  #work-container .column::before {
+    content: ' ';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: #b04d66;
+    background: rgba(176, 77, 102, 0.8);
+    /*display: none;*/
+    opacity: 0;
+    -webkit-transition: all .3s;
+  }
+
+  .works-page #work-container .column::before {
+    background: #2e5571;
+    background: rgba(46, 85, 113, 0.8);
+  }
+
+  #work-container .column:hover::before {
+    /*display: block;*/
+    opacity: 1;
+  }
+
+  .work-overview {
+    width: 50%;
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    z-index: 2;
+    display: none;
+    color: white;
+  }
+
+  .column:hover .work-overview {
+      display: block;
+  }
 }
 
 #work-container .btn {
   background: #2e5571;
   margin-bottom: 55px;
+}
+
+#work-container .btn:hover {
+  background: #1e445e;
 }
 
 #write-container {
@@ -153,6 +239,10 @@ h1 {
 #write-container .btn {
   margin-bottom: 40px;
   background: white;
+}
+
+#write-container .btn:hover {
+  background: #bcddf5;
 }
 
 #write-container .btn a {
@@ -204,4 +294,12 @@ h1 {
   line-height: 70px;
   padding: 0 20px;
   display: inline;
+}
+
+#footer-container li:hover img {
+  -webkit-filter: none;
+}
+
+#footer-container li img {
+  -webkit-filter: brightness(10);
 }
