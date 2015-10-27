@@ -4,6 +4,11 @@ body {
   box-sizing: border-box;
 }
 
+h2 {
+  color: #838383;
+  font-size: 30px;
+}
+
 .btn {
   border: none;
   border-radius: 3px;
@@ -24,10 +29,6 @@ body {
 
 .row {
   display: flex;
-}
-
-.column {
-  width: 50%;
 }
 
 #work-container .column {
@@ -80,7 +81,6 @@ nav ul a:hover::before {
 #head-container {
   height: 500px;
   width: 100%;
-  display: flex;
 }
 
 .home-page #head-container {
@@ -96,9 +96,10 @@ nav ul a:hover::before {
 }
 
 #head-info {
-  width: 37%;
+  width: 40%;
   max-width: 500px;
   margin: auto;
+  padding-top: 120px;
   text-align: center;
 }
 
@@ -109,7 +110,7 @@ h1 {
 }
 
 #head-info p {
-  padding: 0 10px;
+  padding: 0 30px;
   text-align: left;
 }
 
@@ -156,7 +157,8 @@ h1 {
     padding-top: 0;
   }
 
-  #work-container .column::before {
+  .home-page #work-container .column::before,
+  .works-page #work-container .column::before {
     content: ' ';
     height: 100%;
     width: 100%;
@@ -173,7 +175,8 @@ h1 {
     background: rgba(46, 85, 113, 0.8);
   }
 
-  #work-container .column:hover::before {
+  .home-page #work-container .column:hover::before,
+  .works-page #work-container .column:hover::before {
     /*display: block;*/
     opacity: 1;
   }
@@ -259,7 +262,7 @@ h1 {
   margin-bottom: -20px;
 }
 
-#contact-container p {
+#contact-container p, .about-page .narrow-row p {
   width: 50%;
   margin: auto;
 }
@@ -302,4 +305,52 @@ h1 {
 
 #footer-container li img {
   -webkit-filter: brightness(10);
+}
+
+/*                   *\
+      ABOUT STYLES
+\*                   */
+
+.about-page .about-section p {
+  padding: 20px;
+  font-size: .9em;
+}
+
+
+/*                   *\
+    HIGHLIGHT STYLES
+\*                   */
+
+.highlight-page #head-container {
+  height: auto;
+  position: relative;
+  top: -35px;
+  text-align: center;
+}
+
+.highlight-page #head-container img {
+  padding-top: 80px;
+}
+
+#pages-container,
+#type-container,
+#color-container {
+  text-align: center;
+}
+
+#pages-container img {
+  -webkit-box-shadow: 0px 0px 44px -5px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 0px 44px -5px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 44px -5px rgba(0,0,0,0.2);
+}
+
+.highlight-header {
+  width: 40%;
+  margin: auto;
+  padding: 40px 0;
+}
+
+.highlight-header p {
+  color: #838383;
+  font-size: .9em;
 }
