@@ -32,7 +32,7 @@ h2 {
   display: flex;
 }
 
-.column {
+.about-page .column {
   width: 50%;
 }
 
@@ -97,6 +97,11 @@ nav ul a:hover::before {
 
 .about-page #head-container {
   background: #ea6045;
+}
+
+.about-page #head-info p,
+.works-page #head-info p {
+  padding-bottom: 120px;
 }
 
 #head-info {
@@ -266,9 +271,11 @@ h1 {
   margin-bottom: -20px;
 }
 
-#contact-container p, .about-page .narrow-row p {
-  width: 50%;
+.narrow-row p {
+  width: 70%;
   margin: auto;
+  text-align: left;
+  line-height: 1.5em;
 }
 
 #contact-container h4 {
