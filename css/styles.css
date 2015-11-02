@@ -17,6 +17,7 @@ h2 {
   background: none;
   padding: 10px 40px;
   margin-top: 25px;
+  margin-bottom: 80px;
 }
 
 .btn a {
@@ -29,6 +30,10 @@ h2 {
 
 .row {
   display: flex;
+}
+
+.column {
+  width: 50%;
 }
 
 #work-container .column {
@@ -79,7 +84,6 @@ nav ul a:hover::before {
 }
 
 #head-container {
-  height: 500px;
   width: 100%;
 }
 
@@ -310,6 +314,11 @@ h1 {
 /*                   *\
       ABOUT STYLES
 \*                   */
+
+.about-section {
+  text-align: left;
+  line-height:1.4em;
+}
 
 .about-page .about-section p {
   padding: 20px;
