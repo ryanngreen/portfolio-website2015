@@ -403,7 +403,6 @@ h1 {
     position: absolute;
     bottom: 10%;
     left: 10%;
-    z-index: 2;
     display: none;
     color: white;
   }
@@ -438,7 +437,7 @@ h1 {
     padding-right: 5px;
   }
 
-  #hamburger {
+  #navigation-container input, #navigation-container label {
     display: none;
   }
 }
@@ -466,19 +465,19 @@ h1 {
     }
 
     nav a {
-      z-index: 5000;
+      z-index: 10;
     }
 
     #logo {
       height: 30px;
       padding: 15px 10px 0 15px;
-      z-index: 5000;
     }
 
     #navigation-container {
       width: 100%;
-      text-align: left;
       background: none;
+      pointer-events: none;
+      z-index: 10;
     }
 
     #navigation-container ul {
@@ -486,6 +485,10 @@ h1 {
       left: 35%;
       font-weight: bold;
       font-size: .9em;
+    }
+
+    nav {
+      pointer-events: all;
     }
 
     #navigation-container input[type="checkbox"]{
@@ -499,12 +502,13 @@ h1 {
       overflow:hidden;
       padding:10px 12px;
       border-radius:8px;
-      z-index: 5000;
+      z-index: 10;
     }
 
     #navigation-container input[type="checkbox"] + label:hover span{
       background-color:#dd4a2d;
     }
+
     #navigation-container input[type="checkbox"] + label span{
       display:block;
       background-color:#ea6045;
@@ -517,21 +521,23 @@ h1 {
       top:0px;
       opacity:1;
     }
+
     #navigation-container input[type="checkbox"]:checked + label span:nth-child(even){
       opacity:0;
     }
+
     #navigation-container input[type="checkbox"]:checked + label span:nth-child(1){
       -webkit-transform: rotate(45deg) scale(1.4);
       top:7px;
     }
+
     #navigation-container input[type="checkbox"]:checked + label span:nth-child(3){
       -webkit-transform: rotate(-45deg) scale(1.4);
       top:-7px;
     }
 
     #test{
-      opacity: 0;
-      transition: all .2s ease-in-out;
+      display: none;
       position: absolute;
       left: 0;
       height: 100%;
@@ -540,11 +546,16 @@ h1 {
     }
 
     #navigation-container input[type="checkbox"]:checked ~ #test{
-      opacity: 1;
+      display: block;
     }
 
     label {
       margin-top: 7px;
+    }
+
+    label, #logo {
+      filter: brightness(.2);
+      -webkit-filter: brightness(.2);
     }
 
     nav li {
