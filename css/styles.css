@@ -32,6 +32,35 @@ h2 {
   display: flex;
 }
 
+a.hover-link::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+a.hover-link:hover::before {
+  width: 40%;
+}
+
+.pink::before, .pink-back {
+  background-color: #b04d66;
+}
+
+.orange::before, .orange-back {
+  background-color: #ea6045;
+}
+
+.yellow::before, .yellow-back {
+  background-color: #f8ca4d;
+}
+
+.blue::before, .blue-back {
+  background-color: #2e5571;
+}
+
 .about-page .column {
   width: 50%;
 }
@@ -65,6 +94,7 @@ nav li {
   list-style: none;
   text-align: right;
   padding: 5px 0;
+  position: relative;
 }
 
 nav a {
@@ -83,10 +113,6 @@ nav a {
 
 .home-page #head-container {
   background: #f8ca4d;
-}
-
-.works-page #head-container {
-  background: #b04d66;
 }
 
 .about-page #head-container {
@@ -196,6 +222,10 @@ h1 {
 
 .date {
   font-style: italic;
+}
+
+.more {
+  position: relative;
 }
 
 .more a {
@@ -341,6 +371,28 @@ h1 {
   margin: 0 30px;
 }
 
+#work-navigation {
+  width: 50%;
+  margin: 30px auto 10px auto;
+  display: flex;
+}
+
+#work-navigation p {
+  position: relative;
+}
+
+#work-navigation p:last-child {
+  margin-left: auto;
+}
+
+#work-navigation a {
+  text-decoration: none;
+  color: #ea6045;
+}
+
+#work-navigation a.hover-link:hover::before {
+  width: 100%;
+}
 
 
 
@@ -446,10 +498,6 @@ h1 {
   nav ul {
     position: relative;
     right: 15px;
-  }
-  nav ul a:hover::before {
-    content: '>';
-    padding-right: 5px;
   }
 
   #navigation-container input, #navigation-container label {
