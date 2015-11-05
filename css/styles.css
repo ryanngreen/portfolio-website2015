@@ -330,6 +330,17 @@ h1 {
   font-size: .9em;
 }
 
+.inner-img {
+  margin: 40px 0;
+}
+
+#pages-container img.device {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  margin: 0 30px;
+}
+
 
 
 
@@ -362,6 +373,10 @@ h1 {
 
   #head-info {
     width: 70%;
+  }
+
+  .highlight-header {
+    width: 80%;
   }
 }
 
