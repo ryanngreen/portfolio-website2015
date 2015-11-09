@@ -5,9 +5,19 @@ body {
   overflow-x: hidden;
 }
 
+h1 {
+  font-weight: 900;
+  font-size: 3.3em;
+  margin-bottom: 0;
+}
+
 h2 {
-  color: #838383;
+  color: #444444;
   font-size: 30px;
+}
+
+p {
+  line-height: 1.3rem;
 }
 
 .btn {
@@ -31,6 +41,10 @@ h2 {
 
 .row {
   display: flex;
+}
+
+.filler::before {
+  display: none;
 }
 
 a.hover-link::before {
@@ -133,14 +147,7 @@ nav a {
   text-align: center;
 }
 
-h1 {
-  font-weight: 900;
-  font-size: 3.3em;
-  margin-bottom: 0;
-}
-
 #head-info p {
-  padding: 0 30px;
   text-align: left;
 }
 
@@ -283,10 +290,16 @@ h1 {
   height: 75px;
   background: #ea6045;
   text-align: center;
+  position: relative;
+  bottom: 0px;
 }
 
 #footer-container ul {
-  padding-top: 10px;
+  position: relative;
+  top: 10px;
+  height: 50px;
+  padding-left: 0;
+  margin: 0;
 }
 
 #footer-container li {
@@ -302,6 +315,7 @@ h1 {
 
 #footer-container li img {
   -webkit-filter: brightness(10);
+  height: 30px;
 }
 
 /*                   *\
@@ -351,14 +365,19 @@ h1 {
 }
 
 .highlight-header {
-  width: 40%;
+  width: 60%;
   margin: auto;
   padding: 40px 0;
+}
+
+.two-line-header {
+  margin-top: -20px;
 }
 
 .highlight-header p {
   color: #838383;
   font-size: .9em;
+  text-align: left;
 }
 
 .inner-img {
@@ -632,6 +651,14 @@ h1 {
 
     nav ul a:hover {
       text-decoration: underline;
+    }
+
+    /* CHANGING FOOTER */
+
+
+
+    #footer-container img {
+      height: 25px;
     }
 
   }
