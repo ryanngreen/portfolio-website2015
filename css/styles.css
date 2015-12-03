@@ -347,6 +347,7 @@ nav p {
 #footer-container li img {
   -webkit-filter: brightness(10);
   height: 30px;
+  display: inline-block;
 }
 
 /*                   *\
@@ -381,6 +382,13 @@ nav p {
 
 .highlight-page img {
   max-width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.highlight-page img.inline {
+  display: inline-block;
 }
 
 #pages-container,
